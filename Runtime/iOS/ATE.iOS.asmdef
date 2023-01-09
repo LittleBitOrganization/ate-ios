@@ -1,0 +1,19 @@
+{
+    "name": "ATE.iOS",
+    "rootNamespace": "",
+    "references": [
+        "GUID:86295db749784445684749ee05858bf2"
+    ],
+    "includePlatforms": [
+        "iOS",
+        "tvOS"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
