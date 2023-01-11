@@ -10,28 +10,16 @@ namespace DataStorage
         {
             Container
                 .Bind<IDataStorageService>()
-                .FromSubContainerResolve()
-                .ByMethod(BindByMethod)
-                .AsSingle()
-                .NonLazy();
-        }
-
-        private void BindByMethod(DiContainer container)
-        {
-            container
-                .Bind<IDataStorageService>()
                 .To<DataStorageService>()
                 .AsSingle()
                 .NonLazy();
             
-            container
+            Container
                 .Bind<IDataInfo>()
                 .To<InfoDataStorageService>()
                 .FromResource("DataInfoReadonly")
                 .AsSingle()
                 .NonLazy();
-            
-            container.Resolve<IDataStorageService>();
         }
     }
 }

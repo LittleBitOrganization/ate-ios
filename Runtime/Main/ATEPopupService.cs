@@ -1,6 +1,5 @@
 using DataStorage;
 using LittleBit.Modules.CoreModule;
-using UnityEngine;
 using Zenject;
 
 namespace ATE
@@ -20,20 +19,16 @@ namespace ATE
             _dataWrapper = _dataStorageService.CreateDataWrapper<ATEData>(this, DataKey);
 
             _nativePopupFactory = new NativePopupFactory();
-            
-            Debug.LogError("ATEPopupService.Construct()");
         }
 
         public void Initialize()
         {
-            Debug.LogError("ATEPopupService.Initialize()");
             if (!_dataWrapper.Value.AdvertiserTrackingEnabled)
                 ShowPopup();
         }
 
         private void ShowPopup()
         {
-            Debug.LogError("ATEPopupService.ShowPopup()");
             _nativePopupFactory.Create()
                 .SetContent("Your data will be used to measure advertising efficiency.")
                 .SetTitle("Allow 'App' to track your activity across other companies' apps and websites?")
@@ -44,7 +39,6 @@ namespace ATE
 
         private void SetAdvertiserTrackingResponse(bool response)
         {
-            Debug.LogError("ATEPopupService.SetAdvertiserTrackingResponse()");
             _dataWrapper.Value.AdvertiserTrackingEnabled = response;
             _dataWrapper.Save();
         }
