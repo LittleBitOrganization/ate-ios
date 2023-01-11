@@ -41,6 +41,7 @@ namespace ATE
         {
             _dataWrapper.Value.AdvertiserTrackingEnabled = response;
             _dataWrapper.Save();
+            AdSettings.SetAdvertiserTrackingEnabled(response);
         }
     }
 }

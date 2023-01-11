@@ -2,7 +2,7 @@ using LittleBit.Modules.CoreModule;
 using LittleBit.Modules.SaveModule;
 using Zenject;
 
-namespace ATE
+namespace DataStorage
 {
     public class SaverServiceInstaller : MonoInstaller
     {
