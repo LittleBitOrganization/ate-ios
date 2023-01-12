@@ -2,8 +2,6 @@
     "name": "ATE",
     "rootNamespace": "",
     "references": [
-        "GUID:385932f43ef1e4c6b9cfaac5d3e3fc28",
-        "GUID:86295db749784445684749ee05858bf2",
         "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
         "GUID:f15569543c9b20146a6fb1bbb0998646",
         "GUID:b9ebef24af35d544395cc01c7838e792",
